@@ -9,6 +9,17 @@ import os
 from PIL import Image
 import numpy as np
 
+
+
+# This hides the 'Made with Streamlit' footer and the GitHub icon/menu
+hide_style = """
+    <style>
+    #MainMenu {visibility: hidden;}
+    footer {visibility: hidden;}
+    header {visibility: hidden;}
+    </style>
+    """
+st.markdown(hide_style, unsafe_allow_html=True)
 # --- APP CONFIG ---
 st.set_page_config(page_title="Ethiopian LPR System", layout="centered")
 st.title("🚗 License Plate Recognition")
